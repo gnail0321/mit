@@ -19,7 +19,7 @@ if user_message:
         st.write(user_message)
     answer = chat(model="deepseek-r1", messages=[
         {
-        'role': 'use',
+        'role': 'user',
         'content': user_message
         }
     ])
