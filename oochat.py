@@ -19,13 +19,13 @@ if user_message:
         st.write(user_message)
     answer = chat(model="deepseek-r1", messages=[
         {
-        'role': 'user',
+        'role': 'use',
         'content': user_message
         }
     ])
     st.session_state.messages.append({
         'role': 'assistant',
-        'content': answer['message']['content']
+        'content': (answer['message']['content'])
     })
     with st.chat_message(name='assistant'):
         st.write(answer['message']['content'])
